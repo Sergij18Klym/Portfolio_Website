@@ -443,9 +443,6 @@ video {
     body {
       margin: 0;
     }
-    .scroll-header .nav__link {
-        color: var(--text-color);
-    }
     .grid-item {
         width: 33.33333333333333%;
     }
