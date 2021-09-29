@@ -61,7 +61,7 @@ $(document).ready(function () {
                 type: 'inline'
             }]
     });
-	$('.blowup').magnificPopup({
+	$('.vrstudio').magnificPopup({
         type: 'image',
         gallery: { enabled: true }
     });

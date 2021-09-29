@@ -24,6 +24,8 @@
     --mb-2-5: 2.5rem;
 
     --body-color: #FAF7F7;
+    --body-texture: url("../img/paper-texture.png");
+    --body-texture1: url("../img/paper-texture1.png");
     --body-text-color: #1A0D0F;
     --hue-color: 190;
     --first-color: hsl(var(--hue-color), 64%, 22%);
@@ -52,6 +54,7 @@ body {
     font-size: var(--normal-font-size);
     color: var(--body-text-color);
     background-color: var(--body-color);
+    background-image: var(--body-texture1);
 }
 .display__none {
     display: none;
@@ -129,6 +132,7 @@ img, video {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    background-image: var(--body-texture1);
 }
 .nav {
     height: var(--header-height);
@@ -178,6 +182,8 @@ img, video {
     height: 700px;
     background-color: crimson/* #f7c8a2 #f3cd95*/;
     border-radius: 50%;
+    background-image: var(--body-texture);
+    background-blend-mode: multiply;
 }
 .home__img {
     position: absolute;
@@ -230,7 +236,7 @@ img, video {
 /***************PORTFOLIO*****************/
 .portfolio__area {
     position: relative;
-    margin-top: var(--header-height);
+    margin-top: calc(var(--header-height) - 2rem);
 }
 .portfolio__title {
     padding: calc(var(--header-height) + 1.5rem) 0 0.5rem;
@@ -242,7 +248,7 @@ img, video {
 .big__hr {
     height: 2px;
     background-color: var(--body-text-color);
-    opacity: 0.7;
+    opacity: 0.6;
     margin-bottom: 1rem;
 }
 .big__hr:last-child {
@@ -294,14 +300,14 @@ button {
   }
 .img-overlay img {
     display: block;
-    width: 100%;
+    width: 100%;/*
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    filter: grayscale(100%);*/
     transition: var(--img-transition);
 }
-.img-overlay img:hover {
+.img-overlay img:hover {/*
     -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
+    filter: grayscale(0%);*/
     transform: var(--img-scale);
 }
 .grid-item-title {
@@ -321,7 +327,7 @@ button {
 .small__hr {
     height: 1px;
     background-color: var(--body-text-color);
-    opacity: 0.4;
+    opacity: 0.3;
 }
 /***************POPUPS*****************/
 .behance-img,
@@ -434,10 +440,15 @@ video {
 @media (min-width: 480px) {
     .grid__lockd {
       display: flex;
-    }
+    }/*
     .grid-item {
       width: 50%;
-    }
+    }*/
+}
+@media screen and (min-width: 640px) {
+    .grid-item {
+        width: 50%;
+      }
 }
 @media screen and (min-width: 768px) {
     body {
@@ -445,10 +456,10 @@ video {
     }
     .scroll-header .nav__link {
         color: var(--text-color);
-    }
+    }/*
     .grid-item {
         width: 33.33333333333333%;
-    }
+    }*/
 }
 @media screen and (min-width: 1024px) {
     .container {
